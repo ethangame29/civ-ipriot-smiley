@@ -181,9 +181,10 @@ python3 main.py
   Use the following table for your answers:
 
 | Class Name | Super or Sub? | Direct parent(s) |
-| ---------- | ------------- | ---------------- |
-| NotReal    | Sub           | NotRealParent    |
-|   ...      |   ...         |      ...         |
+|------------|---------------|------------------|
+| Smiley     | Super         | None             |
+| Happy      | Sub           | Smiley           |
+| Sad        | Sub           | Smiley           |
 
 2. Explain the concept of abstraction, giving an example from the project (note "implementing an ABC" is **not** in itself an example of abstraction). (Max 150 words)
 
@@ -192,7 +193,7 @@ python3 main.py
 
 3. What is the name of the process of deriving from base classes? What is its purpose in this project? (Max 150 words)
 
-> Your answer here
+> The process of deriving from a base class is called inheritance. Its purpose in this project is to allow for different kinds of smileys such as happy and sad.
 >
 
 ### Compare and contrast classes
