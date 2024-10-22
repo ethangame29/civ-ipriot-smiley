@@ -108,51 +108,51 @@ python3 main.py
 
 1. Examine the code for the `smiley.py` file and provide  an example of a variable of each of the following types and their corresponding values (`_` should be replaced with the appropriate values):
 
-   | Type                    | name       | value          |
-   | ----------              | ---------- | -------------- |
-   | built-in primitive type | _          |  _             |
-   | built-in composite type | _          |  _             |
-   | user-defined type       | _          |  _             |
+   | Type                    | name   | value           |
+   | ----------              |--------|-----------------|
+   | built-in primitive type | dimmed | True            |
+   | built-in composite type | WHITE  | (255, 255, 255) |
+   | user-defined type       | _      | _               |
 
 2. Fill in (`_`) the following table based on the code in `smiley.py`:
 
-   | Object                   | Type                    |
-   | ------------             | ----------------------- |
-   | self.pixels              | _                       |
-   | A member of self.pixels  | _                       |
-   | self                     | _                       |
+   | Object                   | Type         |
+   | ------------             |--------------|
+   | self.pixels              | Composite    |
+   | A member of self.pixels  | Composite    |
+   | self                     | User-Defined |
 
 3. Examine the code for `smiley.py`, `sad.py`, and `happy.py`. Give an example of each of the following control structures using an example from **each** of these files. Include the first line and the line range:
 
-   | Control Flow | File       | First line  | Line range  |
-   | ------------ | ---------- | ----------- | ----------- |
-   |  sequence    |  _         | _           | _           |
-   |  selection   | _          | _           | _           |
-   |  iteration   | _          | _           | _           |
+   | Control Flow | File      | First line | Line range |
+   | ------------ |-----------|------------|------------|
+   |  sequence    | smiley.py | 11         | 26         |
+   |  selection   | sad.py    | 26         | 30         |
+   |  iteration   | happy.py  | 21         | 22         |
 
 4. Though everything in Python is an object, it is sometimes said to have four "primitive" types. Examining the three files `smiley.py`, `sad.py`, and `happy.py`, identify which of the following types are used in any of these files, and give an example of each (use an example from the code, if applicable, otherwise provide an example of your own):
 
-   | Type                    | Used? | Example |
-   | ----------------------- | ----- | --------|
-   | int                     | _     | _          |
-   | float                   | _     | _          |
-   | str                     | _     | _          |
-   | bool                    | _     | _          |
+   | Type                    | Used?     | Example      |
+   | ----------------------- |-----------|--------------|
+   | int                     | smiley.py | Line 5       |
+   | float                   | not used  | float = 10.5 |
+   | str                     | not used  | name = Ethan |
+   | bool                    | happy.py  | Line 39      |
 
 5. Examining `smiley.py`, provide an example of a class variable and an instance variable (attribute). Explain **why** one is defined as a class variable and the other as an instance variable.
 
-> Your answer here
+> An Example of a class variable is WHITE and an example of an instance variable is Y. Class variables are defined within the class itself and belong to the class, Instance variables are defined under __init__(): and belong to each instance of a class.
 >
 
 6. Examine `happy.py`, and identify the constructor (initializer) for the `Happy` class:
    1. What is the purpose of a constructor (in general) and this one (in particular)?
 
-   > Your answer here
+   > The purpose of the constructor is to instantiate classes. This one applies values to the instance.
    >
 
    2. What statement(s) does it execute (consider the `super` call), and what is the result?
 
-   > Your answer here
+   > The 'super().__init__()' calls to the parent class during instantiation. It also calls the draw_mouth() and draw_eyes() functions. The Result is a happy smiley having been drawn.
    >
 
 ### Code style
