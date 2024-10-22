@@ -201,16 +201,16 @@ python3 main.py
 Compare and contrast the classes Happy and Sad.
 
 1. What is the key difference between the two classes?
-   > Your answer here
+   > The happy class contains the blink() method and has the parent class blinkable which is an abstract class. The sad class does not blink and is not linked with blinkable.
    >
 2. What are the key similarities?
-   > Your answer here
+   > Both classes have the methods draw_mouth() and draw_eyes() and both function the same way.
    >
 3. What difference stands out the most to you and why?
-   > Your answer here
+   > The difference that stands out the most to me is the blinkable class being of parent of happy class. Because of this the happy class has to have the blink method.
    >
 4. How does this difference affect the functionality of these classes
-   > Your answer here
+   > 
    >
 
 ### Where is the Sense(Hat) in the code?
