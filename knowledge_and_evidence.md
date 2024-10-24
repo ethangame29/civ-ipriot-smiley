@@ -243,7 +243,7 @@ Unlike the `Happy` smiley, the current implementation of the `Sad` smiley does n
 
 3. Referring to the implementation of blink in the Happy and Sad Smiley classes, give a brief explanation of what polymorphism is.
 
-> Polymorphism means "many forms". In the code for smiley blinking, you can implement a blink() function for both smileys to be able to blink. They will both have the ability to blink but they can have a unique implementation of the blink.
+> Polymorphism means "many forms". In the code for smiley blinking, you can implement a blink() function for both smileys to be able to blink. They will both have the ability to blink but they can have a unique implementation of the blink. This is a form of Polymorphism
 >
 
 4. How is inheritance used in the blink method, and why is it important for polymorphism?
@@ -271,7 +271,7 @@ Include a screenshot of the sad smiley or the modified `main.py`:
 
 - Observe and document the Sad smiley as it blinks its eyes. Describe any adjustments or issues encountered during implementation.
 
-  > Your answer here
+  > No issues were encountered. Adjustments were made to the blink delay.
 
   ### If It Walks Like a Duck…
 
@@ -279,7 +279,7 @@ Include a screenshot of the sad smiley or the modified `main.py`:
 
   1. **Class Type Analysis:** What kind of class is `Blinkable`? Inspect its superclass for clues about its classification.
 
-     > Your answer here
+     > Blinkable is an abstract class.
 
   2. **Class Implementation:** `Blinkable` is a class intended to be implemented by other classes. What generic term describes this kind of class, which is designed for implementation by others? **Clue**: Notice the lack of any concrete implementation and the naming convention.
 
@@ -291,7 +291,7 @@ Include a screenshot of the sad smiley or the modified `main.py`:
 
   4. **Implementation Flexibility:** Explain why you could grant the Sad Smiley a blinking feature similar to the Happy Smiley's implementation, even without directly using `Blinkable`.
 
-  > Your answer here
+  > Because I can still create a blink function similar to the happy smileys blink, the Blinkable class just acts as a common interface.
 
   5. **Concept and Language Specificity:** In relation to your response to question (4), what is this capability known as, and why is it feasible in Python and many other dynamically typed languages but not in most statically typed programming languages like C#? **Clue** This concept is hinted at in the title of this section.
 
@@ -308,19 +308,19 @@ Include a screenshot of the sad smiley or the modified `main.py`:
   1. **Defined Colors and Their Location:**
 
      1. Which colors are defined and in which class(s)?
-        > Your answer here
+        > The colours are defined in the smiley class. The colours include: WHITE GREEN RED YELLOW and BLANK.
      2. What type of variables hold these colors? Are the values expected to change during the program's execution? Explain your answer.
-        > Your answer here
+        > The Colour variables hold tuples which contain ints for RGB codes for colour. The values cannot change since they are a tuple.
      3. Add the color blue to the appropriate class using the appropriate format and values.
 
   2. **Usage of Color Variables:**
 
      1. In which classes are the color variables used?
-        > Your answer here
+        > The colour variables are used in the Sad, Happy and Smiley classes.
 
   3. **Simple Method to Change Colors:**
   4. What is the easiest way you can think to change the smileys to green? Easiest, not necessarily the best!
-     > Your answer here
+     > The easiest way to change the smileys to green is to change the smiley classes pixels to default green.
 
   Here's a revised version of the "Flexible Colors – Step 1" section for the smiley project, incorporating your specifications for formatting and content updates:
 
