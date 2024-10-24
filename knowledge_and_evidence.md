@@ -112,32 +112,32 @@ python3 main.py
    | ----------              |--------|-----------------|
    | built-in primitive type | dimmed | True            |
    | built-in composite type | WHITE  | (255, 255, 255) |
-   | user-defined type       | _      | _               |
+   | user-defined type       | Smiley | _               |
 
 2. Fill in (`_`) the following table based on the code in `smiley.py`:
 
    | Object                   | Type         |
    | ------------             |--------------|
-   | self.pixels              | Composite    |
-   | A member of self.pixels  | Composite    |
-   | self                     | User-Defined |
+   | self.pixels              | List         |
+   | A member of self.pixels  | Tuple        |
+   | self                     | Smiley       |
 
 3. Examine the code for `smiley.py`, `sad.py`, and `happy.py`. Give an example of each of the following control structures using an example from **each** of these files. Include the first line and the line range:
 
    | Control Flow | File      | First line | Line range |
    | ------------ |-----------|------------|------------|
-   |  sequence    | smiley.py | 11         | 26         |
-   |  selection   | sad.py    | 26         | 30         |
-   |  iteration   | happy.py  | 21         | 22         |
+   |  sequence    | main.py   | smiley = Happy() | 10-16|
+   |  selection   | sad.py    | if wide_open:| 26-30    |
+   |  iteration   | happy.py  | for pixel in mouth:| 21-22|
 
 4. Though everything in Python is an object, it is sometimes said to have four "primitive" types. Examining the three files `smiley.py`, `sad.py`, and `happy.py`, identify which of the following types are used in any of these files, and give an example of each (use an example from the code, if applicable, otherwise provide an example of your own):
 
    | Type                    | Used?     | Example      |
    | ----------------------- |-----------|--------------|
-   | int                     | smiley.py | Line 5       |
-   | float                   | not used  | float = 10.5 |
-   | str                     | not used  | name = Ethan |
-   | bool                    | happy.py  | Line 39      |
+   | int                     | smiley.py | WHITE = (255, 255, 255) Integer within a tuple      |
+   | float                   | happy.py  | delay = 0.25 |
+   | str                     | not used  | name = "Ethan" |
+   | bool                    | happy.py  | (wide_open=False)|
 
 5. Examining `smiley.py`, provide an example of a class variable and an instance variable (attribute). Explain **why** one is defined as a class variable and the other as an instance variable.
 
@@ -159,17 +159,17 @@ python3 main.py
 
 1. What code style is used in the code? Is it likely to be the same as the code style used in the SenseHat? Give to reasons as to why/why not:
    
-> Your answer here
+> The Code Style being used is this project is most likely PEP8. The main reason is the 4 line indentation.
 >
 
 2. List three aspects of this convention you see applied in the code.
 
-> Your answer here
+> Three aspects of this convention include: 4 space indentation, Lines of code should be limited to 79 characters and line breaks should begin before mathematical operators.
 >
 
 3. Give two examples of organizational documentation in the code.
 
-> Your answer here
+> This code uses doc strings and comments for documentation.
 >
 
 ### Identifying and understanding classes
@@ -183,7 +183,7 @@ python3 main.py
 | Class Name | Super or Sub? | Direct parent(s) |
 |------------|---------------|------------------|
 | Smiley     | Super         | None             |
-| Happy      | Sub           | Smiley           |
+| Happy      | Sub           | Smiley, Blinkable|
 | Sad        | Sub           | Smiley           |
 
 2. Explain the concept of abstraction, giving an example from the project (note "implementing an ABC" is **not** in itself an example of abstraction). (Max 150 words)
@@ -210,16 +210,16 @@ Compare and contrast the classes Happy and Sad.
    > The difference that stands out the most to me is the blinkable class being of parent of happy class. Because of this the happy class has to have the blink method.
    >
 4. How does this difference affect the functionality of these classes
-   > 
+   > The happy class being a child of the abstract class means it has to have the function to blink whereas the sad class does not need to have a blink function.
    >
 
 ### Where is the Sense(Hat) in the code?
 
 1. Which class(es) utilize the functionality of the SenseHat?
-   > Your answer here
+   > The classes that utilize the functionality of SenseHat are: Happy, Sad and Smiley.
    >
-2. Which of these classes directly interact with the SenseHat functionalities?
-   > Your answer here
+2. Which SenseHat's functionalities do(es) it/them utilize?
+   > There are two SenseHat functions beings used: .set_pixels and .low_light.
    >
 3. Discuss the hiding of the SenseHAT in terms of encapsulation (100-200 Words)
    > Your answer here
@@ -233,22 +233,22 @@ Unlike the `Happy` smiley, the current implementation of the `Sad` smiley does n
 
 1. Does the code's author believe that every `Smiley` should be able to blink? Explain.
 
-> Your answer here
+> The author has created an abstract class called blinkable that is being used by Happy class. Because of this i believe the author thinks every smiley should blink.
 >
 
 2. For those smileys that blink, does the author expect them to blink in the same way? Explain.
 
-> Your answer here
+> I think the author does not expect the smileys to blink in the same way because of the blinkable class. Because of how abstract base classes work, the smileys that use Blinkable will all need to have a blink method that can have their own implementation.
 >
 
 3. Referring to the implementation of blink in the Happy and Sad Smiley classes, give a brief explanation of what polymorphism is.
 
-> Your answer here
+> Polymorphism means "many forms". In the code for smiley blinking, you can implement a blink() function for both smileys to be able to blink. They will both have the ability to blink but they can have a unique implementation of the blink.
 >
 
 4. How is inheritance used in the blink method, and why is it important for polymorphism?
 
-> Your answer here
+> Inheritance is used in the blink method through to abstract class Blinkable. This is important for polymorphism because in abstract classes, you can define methods that all subclasses must have defined. The Blinkable class defines the method blink() which all Smileys have to define. With this, each Smiley can have their own way of blinking which is called polymorphism. 
 >
 1. **Implement Blink in Sad Class:**
 
