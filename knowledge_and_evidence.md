@@ -188,7 +188,7 @@ python3 main.py
 
 2. Explain the concept of abstraction, giving an example from the project (note "implementing an ABC" is **not** in itself an example of abstraction). (Max 150 words)
 
-> Your answer here
+> Abstraction is the process of simplification where the inner details of a function are ignored in order for focus on intention. An example of abstraction in the project is blink(), blink is abstract for the inner function details that allows the smileys to blink. Abstraction also ties into Polymorphism because each smiley can have their own implementation of blink().
 >
 
 3. What is the name of the process of deriving from base classes? What is its purpose in this project? (Max 150 words)
@@ -216,13 +216,13 @@ Compare and contrast the classes Happy and Sad.
 ### Where is the Sense(Hat) in the code?
 
 1. Which class(es) utilize the functionality of the SenseHat?
-   > The classes that utilize the functionality of SenseHat are: Happy, Sad and Smiley.
+   > The class that utilizes the functionality of SenseHat is Smiley.
    >
 2. Which SenseHat's functionalities do(es) it/them utilize?
    > There are two SenseHat functions beings used: .set_pixels and .low_light.
    >
 3. Discuss the hiding of the SenseHAT in terms of encapsulation (100-200 Words)
-   > Your answer here
+   > The purpose of hiding the SenseHAT in terms of encapsulation is to protect its state. If all classes have access to the SenseHAT then they can tamper with its state and cause issues with the program. Encapsulation is the process of protecting an objects state.
    >
 
 ### Sad Smileys Can’t Blink (Or Can They?)
@@ -233,12 +233,12 @@ Unlike the `Happy` smiley, the current implementation of the `Sad` smiley does n
 
 1. Does the code's author believe that every `Smiley` should be able to blink? Explain.
 
-> !?!?! The author has created an abstract class called blinkable that is being used by Happy class. Because of this i believe the author thinks every smiley should blink.
+>The author has created an abstract class called blinkable that is being used by Happy class. Because of this i believe the author thinks every smiley should blink.
 >
 
 2. For those smileys that blink, does the author expect them to blink in the same way? Explain.
 
->!?!?!?! I think the author does not expect the smileys to blink in the same way because of the blinkable class. Because of how abstract base classes work, the smileys that use Blinkable will all need to have a blink method that can have their own implementation.
+>I think the author does not expect the smileys to blink in the same way because of the blinkable class. Because of how abstract base classes work, the smileys that use Blinkable will all need to have a blink method that can have their own implementation.
 >
 
 3. Referring to the implementation of blink in the Happy and Sad Smiley classes, give a brief explanation of what polymorphism is.
@@ -295,7 +295,7 @@ Include a screenshot of the sad smiley or the modified `main.py`:
 
   5. **Concept and Language Specificity:** In relation to your response to question (4), what is this capability known as, and why is it feasible in Python and many other dynamically typed languages but not in most statically typed programming languages like C#? **Clue** This concept is hinted at in the title of this section.
 
-  > Your answer here
+  > This capability is called duck typing. It is possible in Python because its methods are verified during runtime whereas in static languanges, types are verified at compile time.
 
   ***
 
